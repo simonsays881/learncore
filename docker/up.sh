@@ -13,7 +13,7 @@ docker-compose stop grafana
 echo "Starting services ..."
 
 docker-compose up -d zookeeper
-docker-compose up -d kafka
+docker-compose up --no-recreate -d kafka
 docker-compose up -d influxdb
 docker-compose up --build -d telegraf 
 docker-compose up --build -d grafana 

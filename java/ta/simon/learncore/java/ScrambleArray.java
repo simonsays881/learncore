@@ -8,10 +8,10 @@ import java.util.Random;
 public class ScrambleArray {
 
   public static void main(String[] args) {
-    final String[] array = args;// {39, 46, 91, 11, 4, 0, 2};
+    final String[] array = args;
 
     System.out.println("Before the shuffle: " + Arrays.toString(array));
-    System.out.println("....");
+    System.out.println("...everyday I'm shuffling...");
     System.out.println("After the shuffle: " + shuffle(array));
   }
 
@@ -22,7 +22,6 @@ public class ScrambleArray {
 
   private static List<String> asList(String[] array) {
     final List<String> list = new ArrayList<>();
-
     for (int i = 0; i < array.length; i++) {
       list.add(array[i]);
     }
@@ -35,10 +34,10 @@ public class ScrambleArray {
     final List<String> shuffled = new ArrayList<>();
 
     for (int i = 0; i < length; i++) {
-    final int n = rand.nextInt(list.size());
-    final String index = list.remove(n);
-
-    shuffled.add(index);
+       final int n = rand.nextInt(list.size());
+       final String index = list.remove(n);
+     
+       shuffled.add(index);
     }
     return shuffled;
   }
