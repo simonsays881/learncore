@@ -8,9 +8,7 @@ NOTE: If you are using `docker-machine` you _must_ run `eval "$(docker-machine e
 
 ## Usage
 
-Run `/up.sh` and 
-
-This docker repo contains a docker-compose file that will launch a number of services used to visualize your computer's system usage.
+Run `./create_machine.sh` to create a docker-machine (if necessary) and then run `./up.sh` to launch all of the services with docker-compose.
 
 It launches a number of services:
 
@@ -20,11 +18,20 @@ telegraf
 influxdb
 grafana
 
-
 #### Check out some graphs!
 
 Open a web browser and visit localhost:3000 (or 192.168.99.100:3000 if you are using docker-machine). You can use admin/admin to log into Grafana and create some graphs!
 
-#### Tail some logs!
+#### Scripts!
+
+`./up.sh` to bring up all services
+
+`./inspect_environment.sh` will check whether or not to use `192.168.99.100` for the localhost (docker-machine) or localhost (Docker for Mac)
+
+`./restart.sh` to restart everything
+
+`./stop.sh` to stop all services
+
+`./kill.sh` to kill stop all services and remove their respective containers and images
 
 `./log.sh` ${SERVICE} will tail the logs of the service
