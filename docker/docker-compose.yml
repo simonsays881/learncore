@@ -25,17 +25,17 @@ services:
     depends_on:
      - influxdb
    
-  kapacitor:
-    #image: kapacitor:1.4
-    build: ./kapacitor
-    ports:
-      - "9092:9092"
+# kapacitor:
+#    image: kapacitor:1.4
+#    build: ./kapacitor
+#    ports:
+#      - "9092:9092"
   
-  chronograf:
-    #image: chronograf:1.4
-    build: ./chronograf
-    ports:
-      - "8000:8000"
+#  chronograf:
+#    image: chronograf:1.4
+#    build: ./chronograf
+#    ports:
+#      - "8000:8000"
   
   grafana:
     build: ./grafana
